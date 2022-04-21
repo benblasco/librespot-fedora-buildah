@@ -5,14 +5,14 @@ pipeline {
         stage('Where am I') {
             steps {
                 echo 'Ben is identifying node'
-                bash -x 'hostnamectl'
+                sh -x 'hostnamectl'
             }
         }
         stage('Clone') {
             String repoUrl = "https://github.com/benblasco/librespot-fedora-buildah.git"
             steps {
                 echo 'Ben is cloning the repo'
-                bash 'mkdir -p build'
+                sh 'mkdir -p build'
                 dir('build') {
                     git url: repoUrl
                 }
@@ -21,7 +21,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Ben is Building Librespot'
-                bash -x 'uname -a'
+                sh -x 'uname -a'
             }
         }
         stage('Test') {
