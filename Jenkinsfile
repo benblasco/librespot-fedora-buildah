@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     stages {
-        stage('Where am I') {
+        stage('Check') {
             steps {
                 echo 'Ben is identifying node'
             }
