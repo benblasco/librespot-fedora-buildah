@@ -1,6 +1,8 @@
 pipeline {
+    environment {
+        repoUrl = "https://github.com/benblasco/librespot-fedora-buildah.git"
+    }
     agent any
-
     stages {
         stage('Check') {
             steps {
@@ -8,7 +10,6 @@ pipeline {
             }
         }
         stage('Clone') {
-            String repoUrl = "https://github.com/benblasco/librespot-fedora-buildah.git"
             steps {
                 echo 'Ben is cloning the repo'
                 sh 'mkdir -p build'
