@@ -2,6 +2,12 @@ pipeline {
     agent any
 
     stages {
+        stage('Where am I') {
+            steps {
+                echo 'Ben is identifying node'
+                bash -x 'hostnamectl'
+            }
+        }
         stage('Clone') {
             String repoUrl = "https://github.com/benblasco/librespot-fedora-buildah.git"
             steps {
