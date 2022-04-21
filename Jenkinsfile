@@ -1,6 +1,6 @@
 pipeline {
     environment {
-        repoUrl = "https://github.com/benblasco/librespot-fedora-buildah.git"
+        repoUrl = "https://github.com/benblasco/librespot-fedora-buildah"
     }
     agent any
     stages {
