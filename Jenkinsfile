@@ -13,10 +13,7 @@ pipeline {
         stage('Clone Repo') {
             steps {
                 echo 'Ben is cloning the repo'
-                sh 'mkdir -p build'
-                dir('build') {
-                    git url: repoUrl
-                }
+                git url: repoUrl
             }
         }
         stage('Build') {
