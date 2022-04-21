@@ -5,7 +5,6 @@ pipeline {
         stage('Where am I') {
             steps {
                 echo 'Ben is identifying node'
-                sh -x 'hostnamectl'
             }
         }
         stage('Clone') {
