@@ -19,7 +19,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Build Librespot'
-                sh 'pwd && bash -x librespot-buildah.sh'
+                sh 'pwd && buildah unshare ./librespot-buildah.sh'
             }
         }
         stage('Test') {

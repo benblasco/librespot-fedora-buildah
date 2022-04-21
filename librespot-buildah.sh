@@ -2,7 +2,7 @@
 
 # You can enter the user namespace using the buildah unshare command.
 # If you don’t do this, the buildah mount, command will fail. 
-buildah unshare
+#buildah unshare
 
 CONTAINER=$(buildah from registry.fedoraproject.org/fedora-minimal:35)
 
@@ -26,5 +26,3 @@ cp ${MNT}/root/anaconda-post.log /tmp
 
 
 buildah commit ${CONTAINER} librespot-container
-
-exit
