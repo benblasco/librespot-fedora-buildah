@@ -20,7 +20,7 @@ buildah config --cmd "--name=Buildah_LibreSpot_Speaker --bitrate=320 --zeroconf-
 buildah config --label maintainer="Benjamin Blasco" ${CONTAINER}
 buildah config --label description="Fedora-based container for running librespot, built on Rust" ${CONTAINER}
 
-cp $MNT/root/.cargo/bin/librespot /tmp
+cp ${MNT}/root/.cargo/bin/librespot /tmp
 
 buildah commit ${CONTAINER} librespot-container
 
