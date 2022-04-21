@@ -6,32 +6,32 @@ pipeline {
     stages {
         stage('Identify build node') {
             steps {
-                echo 'Ben is identifying node'
+                echo 'Identify build node'
                 sh 'hostnamectl'
             }
         }
         stage('Clone Repo') {
             steps {
-                echo 'Ben is cloning the repo'
+                echo 'Clone build repo'
                 git url: repoUrl, branch: 'main'
             }
         }
         stage('Build') {
             steps {
-                echo 'Ben is Building Librespot'
+                echo 'Build Librespot'
                 sh 'pwd && bash -x librespot-buildah.sh'
             }
         }
         stage('Test') {
             steps {
-                echo 'Ben is Testing...'
+                echo 'Test the build'
                 sh 'uptime'
                 sh 'timedatectl'
             }
         }
         stage('Deploy') {
             steps {
-                echo 'Ben is Deploying...'
+                echo 'Deploy artifact'
                 sh 'whoami'
             }
         }
