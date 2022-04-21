@@ -24,5 +24,8 @@ echo ${MNT}
 cp ${MNT}/root/.cargo/bin/librespot /tmp
 cp ${MNT}/root/anaconda-post.log /tmp
 
+buildah umount $CONTAINER
 
 buildah commit ${CONTAINER} librespot-container
+
+buildah rm $CONTAINER
