@@ -21,7 +21,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Ben is Building Librespot'
-                sh -x 'uname -a'
+                sh 'uname -a'
             }
         }
         stage('Test') {
