@@ -4,12 +4,13 @@ pipeline {
     }
     agent any
     stages {
-        stage('Check') {
+        stage('Identify build node') {
             steps {
                 echo 'Ben is identifying node'
+                sh 'hostnamectl'
             }
         }
-        stage('Clone') {
+        stage('Clone Repo') {
             steps {
                 echo 'Ben is cloning the repo'
                 sh 'mkdir -p build'
