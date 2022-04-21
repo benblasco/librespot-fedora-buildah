@@ -13,7 +13,7 @@ pipeline {
         stage('Clone Repo') {
             steps {
                 echo 'Ben is cloning the repo'
-                git url: repoUrl
+                git url: repoUrl, branch: 'main'
             }
         }
         stage('Build') {
