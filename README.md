@@ -10,6 +10,12 @@ Actions required:
 - [ ] Write some code to create a systemd service for the binary
 - [ ] Share more broadly!
 
+Tasks to automate launch on host
+- [ ] Copy executable to /usr/local/bin or /usr/bin
+- [ ] for user: loginctl enable-linger
+- [ ] Add the systemd unit file to ~/.config/systemd/user (see inside this repo)
+- [ ] systemctl --user enable --now librespot.user.service
+
 # Librespot Rust Package
 
 Github repo
