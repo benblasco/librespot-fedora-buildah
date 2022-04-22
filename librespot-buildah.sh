@@ -22,7 +22,6 @@ buildah config --label description="Fedora-based container for running librespot
 
 echo ${MNT}
 cp ${MNT}/root/.cargo/bin/librespot /tmp
-cp ${MNT}/root/anaconda-post.log /tmp
 
 buildah umount $CONTAINER
 
