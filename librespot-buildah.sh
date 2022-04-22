@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
 
-# You can enter the user namespace using the buildah unshare command.
-# If you don’t do this, the buildah mount, command will fail. 
-#buildah unshare
+# This script must be executed using the "buildah unshare" command."
+# "If an unprivileged users wants to mount and work with a container,
+# thenthey need to execute buildah unshare.
+# Executing buildah mount fails for unprivileged users unless the user is
+# running inside a buildah unshare session."
 
 CONTAINER=$(buildah from registry.fedoraproject.org/fedora-minimal:35)
 
