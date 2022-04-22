@@ -1,3 +1,15 @@
+# Introduction
+
+This repo aims to automate the build of the librespot binary on a Fedora host and extract it to the temporary directory of the build host
+It is not very mature in that it does not conduct meaningful checks to see if the build process succeeded, but will evolve when time and motivation permits.
+
+Below is some supporting information I have used in the past.  Note that some of the instructions relate to running the binary from within the container, which is ultimately unnecessary and adds complexity.
+
+Actions required:
+- [ ] Add more checks to build process
+- [ ] Write some code to create a systemd service for the binary
+- [ ] Share more broadly!
+
 # Librespot Rust Package
 
 Github repo
