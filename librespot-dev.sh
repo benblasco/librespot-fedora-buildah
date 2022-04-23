@@ -13,7 +13,8 @@ buildah run ${CONTAINER} microdnf install -y gcc alsa-lib-devel rust rustfmt cli
 buildah run ${CONTAINER} git clone https://github.com/librespot-org/librespot.git /root/librespot
 buildah run ${CONTAINER} /bin/bash -c 'cd /root/librespot; \
         git switch dev; \
-        cargo build --no-default-features --features "alsa-backend"'
+        cargo build --release --no-default-features --features "alsa-backend"'
+        #cargo build --no-default-features --features "alsa-backend"'
 
 MNT=$(buildah mount $CONTAINER)
 echo ${MNT}
