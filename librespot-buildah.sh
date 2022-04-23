@@ -23,7 +23,7 @@ buildah config --label maintainer="Benjamin Blasco" ${CONTAINER}
 buildah config --label description="Fedora-based container for running librespot, built on Rust" ${CONTAINER}
 
 echo ${MNT}
-cp ${MNT}/root/.cargo/bin/librespot /tmp
+cp ${MNT}/root/.cargo/bin/librespot .
 
 buildah umount $CONTAINER
 
