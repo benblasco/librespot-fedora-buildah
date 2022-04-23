@@ -36,4 +36,9 @@ pipeline {
             }
         }
     }
+    post {
+        always {
+            archiveArtifacts artifacts: 'librespot', fingerprint: true
+        }
+    }
 }
