@@ -39,6 +39,9 @@ pipeline {
     post {
         always {
             archiveArtifacts artifacts: 'librespot', fingerprint: true
+            mail to: 'team@example.com',
+              subject: "Librespot build result: ${currentBuild.fullDisplayName}",
+              body: "This is what we did ${env.BUILD_URL}"
         }
     }
 }
