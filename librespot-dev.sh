@@ -18,7 +18,7 @@ buildah run ${CONTAINER} /bin/bash -c 'cd /root/librespot; \
 
 MNT=$(buildah mount $CONTAINER)
 echo ${MNT}
-cp ${MNT}/root/librespot/target/debug/librespot .
+cp ${MNT}/root/librespot/target/release/librespot .
 
 buildah umount $CONTAINER
 
