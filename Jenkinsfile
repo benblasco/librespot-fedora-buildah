@@ -2,7 +2,7 @@ pipeline {
     environment {
         repoUrl = "https://github.com/benblasco/librespot-fedora-buildah"
     }
-    agent any
+    agent 'librespot'
     stages {
         stage('Identify build node') {
             steps {
