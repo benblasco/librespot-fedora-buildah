@@ -6,7 +6,7 @@
 # Executing buildah mount fails for unprivileged users unless the user is
 # running inside a buildah unshare session."
 
-CONTAINER=$(buildah from registry.fedoraproject.org/fedora-minimal:36)
+CONTAINER=$(buildah from registry.fedoraproject.org/fedora-minimal:38)
 
 MNT=$(buildah mount $CONTAINER)
 
